@@ -29,7 +29,16 @@ function filter_input(){
 	}
 	console.log(arr);
 }
-
+//запрос страницы сайта
+function connect(){
+	var request = require('request');
+	var url = document.getElementById("enterlink").value;
+	request(url,function (err, res ,body) {
+		if (err) throw err;
+		console.log(body);
+		console.log(res.statusCode);
+	})
+}
 
 
 // 1 - написать функцию для подключения к сайту букмекера

@@ -12,23 +12,23 @@
 	<body bgcolor="#330202" background="img/kontrastnaja-setka.png">
 <!--	<img class="fon" src="img/kontrastnaja-setka.png">-->
 	<form>
-		<input id="enterlink" type = "text" name = "linksite"  value = "Введите  адрес  сайта"/> 
+		<input id = "enterlink" type="text" name = "linksite" value="Введите адрес сайта" onfocus="if (this.value == 'Введите адрес сайта') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Введите адрес сайта';}">
 		<div id="SLbutton">
 		<input id="Lbutton" type="button" class="io" name="loadlink" onClick="Load()" value="Загрузить ссылку"/>
 		<input id="Sbutton" type="button" class="io" name="savelink" onClick="filter_input()" value="Сохранить ссылку"/>
 		</div>
 	</form>
-	
+
 <!--	div контейнер для таблицы вврода фильтров, счета игры и вывода результата-->
 	<div id="intabel">
 <!--		заголовок-номеров фильтров -->
-		<div id="headfilter" align="center">Фильтры</div>	
+		<div id="headfilter" align="center">Фильтры</div>
 		<!--заголок "Фильтры"-->
-		
+
 <!--Контейнер номеров фильтров		-->
 		<div id="number">
 			<div id = "f1" >
-				1			
+				1
 			</div>
 			<div id = "f2" >
 				2
@@ -57,9 +57,9 @@
 		</div>
 <!--		тело дива куда ввожу данные-->
 		<div id = "setka">
-			
+
 				<div class="iodisplay">
-					<input class = "user_i" id = "in1" type = "text">	
+					<input class = "user_i" id = "in1" type = "text">
 				</div>
 				<div class="iodisplay">
 					<input class = "user_i" id = "in4" type = "text">
@@ -74,7 +74,7 @@
 					<input class = "user_i" id = "in13" type = "text">
 				</div>
 
-			
+
 				<div class="iodisplay">
 					<input class = "user_i" id = "in2" type = "text">
 				</div>
@@ -91,7 +91,7 @@
 					<input class = "user_i" id = "in14" type = "text">
 				</div>
 
-			
+
 				<div class="iodisplay">
 					<input class = "user_i" id = "in3" type = "text">
 				</div>
@@ -124,7 +124,8 @@
 		</div>
 		<div id="button">
 <!--			<p id="start_button"><input class="io" type="button" name="Start" onclick = "Prov()"  value="Старт"/></p>/-->
-			<p id="start_button"><input class="io" type="button" name="Start" onclick = "Output()" value="Старт"/></p>
+			<!-- <p id="start_button"><input class="io" type="button" name="Start" onclick = "Output()" value="Старт"/></p> -->
+			<p id="start_button"><input class="io" type="button" name="Start" onclick = "connect()" value="Старт"/></p>
 		</div>
 	</div>
 </body>
