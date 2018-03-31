@@ -12,7 +12,7 @@
 	<body bgcolor="#330202" background="img/kontrastnaja-setka.png">
 <!--	<img class="fon" src="img/kontrastnaja-setka.png">-->
 	<form>
-		<input id = "enterlink" type="text" name = "linksite" value="Введите адрес сайта" onfocus="if (this.value == 'Введите адрес сайта') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Введите адрес сайта';}">
+		<input id = "enterlink" type="text" name = "linksite" value="Введите адрес сайта" onfocus="if (this.value == 'Введите адрес сайта') {this.value = 'https://www.';}" onblur="if (this.value == '') {this.value = 'Введите адрес сайта';}">
 		<div id="SLbutton">
 		<input id="Lbutton" type="button" class="io" name="loadlink" onClick="Load()" value="Загрузить ссылку"/>
 		<input id="Sbutton" type="button" class="io" name="savelink" onClick="filter_input()" value="Сохранить ссылку"/>

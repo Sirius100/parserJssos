@@ -29,16 +29,19 @@ function filter_input(){
 	}
 	console.log(arr);
 }
-//запрос страницы сайта
+//запрос DOM страницы сайта
 function connect(){
-	var request = require('request');
+	var request = new XMLHttpRequest();
 	var url = document.getElementById("enterlink").value;
-	request(url,function (err, res ,body) {
-		if (err) throw err;
-		console.log(body);
-		console.log(res.statusCode);
-	})
-}
+	request.open("GET",url);
+	request.onreadystatechange = function (){
+		if (request.readyState === 4 && request.status === 200 ){
+			request.setRequestHeader("Content-Type","text/plan;charset=UTF=8");
+			console.log(request.responseText);
+			}
+		}
+		request.send();
+	}
 
 
 // 1 - написать функцию для подключения к сайту букмекера
